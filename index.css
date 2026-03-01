@@ -19,7 +19,7 @@
     width: 80%;
     max-width: 700px;
     padding: 50px 40px;
-    background: #f8ecd1;
+    background: #f5f2ed;
     /* light parchment color */
     background-image:
         radial-gradient(rgba(0, 0, 0, 0.03) 1px, transparent 1px),
@@ -76,6 +76,10 @@ h1.fancy-font {
 
 .align-right {
     text-align: right;
+}
+
+p.fancy-font {
+    background-color: transparent;
 }
 
 .fade-line {
