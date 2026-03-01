@@ -13,6 +13,7 @@
 </head>
 
 <body>
+
     <div class="container">
         <div class="invite-card">
             <h1 class="fancy-font card-title fade-line">Wedding Invitation</h1>
@@ -25,6 +26,34 @@
             <p class="fancy-font fade-line">at 5th Floor of Utopia Wedding Reception Hall.</p>
         </div>
     </div>
+    <div class="petal-container"></div>
+    <script>
+        const container = document.querySelector('.petal-container');
+
+        function createPetal() {
+            const petal = document.createElement('span');
+            petal.classList.add('petal');
+
+            const size = Math.random() * 10 + 10;
+            const startX = Math.random() * window.innerWidth;
+            const drift = (Math.random() - 0.5) * 200;
+            const duration = Math.random() * 5 + 6;
+
+            petal.style.width = `${size}px`;
+            petal.style.height = `${size}px`;
+            petal.style.left = `${startX}px`;
+            petal.style.animationDuration = `${duration}s`;
+            petal.style.setProperty('--drift', `${drift}px`);
+
+            container.appendChild(petal);
+
+            setTimeout(() => {
+                petal.remove();
+            }, duration * 1000);
+        }
+
+        setInterval(createPetal, 400);
+    </script>
 </body>
 
 </html>
