@@ -13,15 +13,42 @@
 }
 
 .invite-card {
-    width: 80%;
-    height: auto;
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: repeat(5, 80px) repeat(3, 50px);
+    position: relative;
+    background: url('https://i.ibb.co/5x2n1Qh/parchment-texture.jpg') no-repeat center/cover;
     z-index: 10;
-    /* grid-auto-rows: 1fr; */
+    width: 80%;
+    max-width: 700px;
+    padding: 50px 40px;
+    background: #f8ecd1;
+    /* light parchment color */
+    background-image:
+        radial-gradient(rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+        radial-gradient(rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+    background-size: 20px 20px;
+    background-position: 0 0, 10px 10px;
+    border: 2px solid #d2af26;
+    /* golden border */
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    font-family: 'Great Vibes', cursive;
+    color: #D2AF26;
+    /* gold text */
+    line-height: 1.6;
+    overflow: hidden;
 }
 
+/* Optional: "burnt edges" effect using pseudo-element */
+.invite-card::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.05) 10%, transparent 50%);
+    border-radius: 25px;
+    pointer-events: none;
+}
 
 .card-title {
     grid-template-columns: auto;
@@ -30,6 +57,13 @@
 
 .fancy-font {
     font-family: 'Great Vibes';
+}
+
+.card-title,
+h1.fancy-font {
+    background: linear-gradient(90deg, #FFD700, #D4AF37);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .align-left {
