@@ -159,3 +159,47 @@ p.fancy-font {
         transform: translateX(var(--drift)) translateY(110vh) rotate(360deg);
     }
 }
+
+.photo-row {
+    display: flex;
+    gap: 10px;
+    margin: 15px 0;
+    height: 120px;
+}
+
+.photo-row img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 1px solid #d2af26;
+}
+
+.invite-card {
+    padding: 25px 20px;
+    max-height: 85vh;
+}
+
+h1.fancy-font {
+    margin: 5px 0;
+    font-size: 28px;
+}
+
+p.fancy-font {
+    margin: 4px 0;
+    font-size: 14px;
+}
+
+@media (max-width: 480px) {
+    .photo-row {
+        height: 100px;
+    }
+
+    h1.fancy-font {
+        font-size: 24px;
+    }
+
+    p.fancy-font {
+        font-size: 13px;
+    }
+}
